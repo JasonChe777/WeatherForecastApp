@@ -60,7 +60,6 @@ class WeatherListActivity : AppCompatActivity() {
                     putExtra("weather", it)
                     putExtra("city", city)
                 }
-
                 startActivity(wdIntent)
             }
         }
