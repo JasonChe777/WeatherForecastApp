@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="weather"
+            type="com.example.weatherforecastapp.data.DetailedWeather" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.WeatherDetailsActivity">
+
+    <TextView
+        android:id="@+id/tvTemp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="72"
+        android:text='@{String.format("%.2f", weather.main.temp)}'
+        android:layout_marginTop="@dimen/x4"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvFeelsLike"
+        android:text='@{String.format("Feels like: %.2f", weather.main.feelsLike)}'
+        tools:text="Feels like: 78"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/x6"
+        android:layout_marginTop="@dimen/x6"
+        app:layout_constraintTop_toBottomOf="@id/tvTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvMain"
+        tools:text="Clouds"
+        android:text="@{weather.weather.get(0).main}"
+        app:layout_constraintTop_toBottomOf="@id/tvFeelsLike"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/x6"
+        android:layout_marginTop="48dp"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:text="@{weather.weather.get(0).description}"
+        tools:text="broken clouds"
+        app:layout_constraintTop_toBottomOf="@id/tvMain"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/x4"
+        android:layout_marginStart="@dimen/x6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

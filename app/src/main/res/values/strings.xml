@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherForecastApp</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="look_up">Look Up</string>
+    <string name="error_please_enter_city">Please enter the city name</string>
+    <string name="error_no_internet">No internet.</string>
+    <string name="error_no_internet_msg">Please make sure you are connected to active internet connection.</string>
+    <string name="button_ok">Ok</string>
+</resources>
