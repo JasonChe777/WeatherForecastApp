@@ -1,5 +1,5 @@
 # WeatherForecastApp
-This application is created for assignement submition purpose. User can input city name and can get the Weather Forecast for the Next 5 days every 3 hours.
+This application is created for assignment submission purpose. User can input city name and can get the Weather Forecast for the Next 5 days every 3 hours.
 
 ## Technologies Used
 - Kotlin
